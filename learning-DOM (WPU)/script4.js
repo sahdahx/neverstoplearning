@@ -1,22 +1,22 @@
 // Event Handling
-// const close = document.querySelector('.close');
-// const card = document.querySelector('.card');
+const close = document.querySelector('.close');
+const card = document.querySelector('.card');
 
-// close.addEventListener('click', function() {
-//     card.style.display = 'none';
-// });
+close.addEventListener('click', function() {
+    card.style.display = 'none';
+});
 
 // DOM Traversal
 const close = document.querySelectorAll('.close');
 const card = document.querySelectorAll('.card');
 
-// for(let i = 0; i < close.length; i++) {
-//     close[i].addEventListener('click', function() {
-//         // alert('tombol ke-' + i) // buat klik
-//         // card[i].style.display = 'none'; // buat hilang
-//         close[i].parentElement.style.display = 'none'; // buat hilang tapi pakai parentElement
-//     });
-// }
+for(let i = 0; i < close.length; i++) {
+    close[i].addEventListener('click', function() {
+        // alert('tombol ke-' + i) // buat klik
+        // card[i].style.display = 'none'; // buat hilang
+        close[i].parentElement.style.display = 'none'; // buat hilang tapi pakai parentElement
+    });
+}
 
 // DOM Traversal Method
 // - parentNode -> node
