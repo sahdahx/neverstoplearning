@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    
+}
+
+body {
+    background-color: slategrey;
+    text-align: center;
+}
+
+.jumbo {
+    width: 900px;
+}
+
+.container {
+    width: 900px;
+    margin: 10px auto;
+    border: 5px solid whitesmoke;
+    overflow: auto;
+}
+
+.thumb {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    float: left;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.thumb:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+@keyframes fade {
+    to {
+        opacity: 2;
+    }
+}
+
+.fade {
+    opacity: 0.7;
+    animation: fadeIn 0.5s forwards;
+}
+
+.active {
+    opacity: 0.5;
+}
