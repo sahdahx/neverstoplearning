@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event World</title>
+    <style>
+        .contents {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid black;
+        padding: 15px;
+        }
+
+        #generateButton {
+        margin-top: 5px;
+        margin-bottom: 15px;;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents" align="center" hidden>
+        <button id="incrementButton">Tekan Aku :)</button>
+        <h3>Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
+    </div>
+
+<script>
+// Menambahkan Event Handler - Menyiapkan Halaman Website
+// Menambahkan Event Handler - Membuat event handler onclick
+    function increment() {
+    // `increment`, bertugas untuk meningkatkan nilai yang ditampilkan di dalam elemen dengan id `count` setiap kali tombol dengan id `incrementButton` diklik.
+    // Itu dilakukan dengan cara mengambil elemen dengan id `count`, kemudian menambahkan satu ke nilai yang ada pada elemen tersebut setiap kali tombol diklik.
+        document.getElementById('count').innerText++;
+        if (document.getElementById('count').innerText == 6) {
+            const hiddenMessage = document.createElement('h4');
+            hiddenMessage.innerText = 'Selamat! Anda menemukan hadiah tersembunyi...';
+            const image = document.createElement('img');
+            image.setAttribute('src', 'https://www.thewowstyle.com/wp-content/uploads/2021/05/What-Exactly-is-the-Dark-Web.jpg');
+            const contents = document.querySelector('.contents');
+            contents.appendChild(hiddenMessage).appendChild(image);
+        }
+    }
+
+    document.getElementById('incrementButton').onclick = increment;
+
+    function welcome() {
+        alert('Sim salabim muncullah elemen-elemen HTML!');
+        const contents = document.querySelector('.contents');
+        contents.removeAttribute('hidden');
+    }
+
+// Menambahkan Event Handler - Membuat event handler onload
+    document.body.onload = welcome;
+</script>
+</body>
+</html>
